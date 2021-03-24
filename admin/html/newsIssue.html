@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="../css/newsLssue.css">
+   <script src="../js/jQuery.min.js"></script>
+   <script src="../js/axios.js"></script>
+</head>
+<body>
+   <div class="wrap">
+      <div class="title">
+         <p><span class="fa fa-map-signs"></span>当前操作：消息发布</p>
+      </div>
+      <div class="info">
+         <label for="">消息标题：</label>
+         <input type="text" style="padding-left: 14px;" placeholder="请输入信息题目" class="titleI">
+      </div>
+      <textarea name="" id="" cols="120" rows="14" placeholder="请输入您要发表的关于辉达的描述内容，每个自然段用‘_’分割!"></textarea>
+      </br><button class="add">发布</button>
+   </div>
+
+   <script>
+      var date=new Date()
+		var time=date.getTime();
+      var y=date.getFullYear()
+      var m=date.getMonth()
+      m=m<10?'0'+m:m
+      var d=date.getDate()
+      d=d<10?'0'+d:d
+      $('.add').click(function(){
+         var title=$('.titleI').val()
+         if(title==''){
+            alert('标题不可为空！')
+            return false 
+         }
+         var area=$('textarea').val().trim()
+         if(area==''){
+            alert('内容不可为空！')
+            return false
+         }
+         
+         var url="http://localhost/hd/admin/php/newsIssue.php"
+         axios.get(url,{params:{title:title,area:area,date:String(y+'-'+m+'-'+d),time:time}}).then(res=>{
+            console.log(res)
+         })
+      })
+   </script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="../css/newsAdmin.css">
+   <script src="../js/jQuery.min.js"></script>
+   <script src="../js/axios.js"></script>
+</head>
+<body>
+   <div class="wrap">
+      <div class="title">
+         <p><span class="fa fa-map-signs"></span>当前操作：信息管理</p>
+      </div>
+      <div class="time">
+         <div class="start">
+            <label>起始时间：</label>
+            <input type="date" class="date1">
+         </div>
+         <div class="end">
+            <label>结束时间：</label>
+            <input type="date" class="date2">
+         </div>
+         <button class="search">查询</button>
+      </div>
+      <table border="2"  cellspacing="0">
+         <tr>
+            <th style="height: 40px;">信息标题</th>
+            <th style="width: 160px;">发布日期</th>
+            <th style="width: 120px;">操作</th>
+         </tr>
+      </table>
+   </div>
+
+
+   <script>
+      var date=new Date
+      var time=date.getTime()
+      $('.search').click(function(){
+         if($('.date1').val()==''||$('.date2').val()==''){
+            alert('时间不可为空');
+            return 
+         }
+         var date1=$('.date1').val()
+         var date2=$('.date2').val()
+         var time1=new Date(date1+' 00:00:00').getTime()
+         var time2=new Date(date2+' 23:59:59').getTime()
+			var url="http://localhost/hd/admin/php/newsAdmin.php";
+			axios.get(url,{params:{time1,time2}}).then(res=>{
+				aaa(res)
+			})
+      })
+		function aaa(res){
+			if(res.data=='1'){
+				$('table td').parents('tr').remove()
+				alert('没有查询到')
+			}else{
+				if(typeof res.data=='object'){
+					$('table td').parents('tr').remove()
+					var str='';
+					str+=`<tr><td>${res.data.news_title}</td><td>${res.data.news_time}</td><td><button class="btn1">删除</button></td></tr>`
+					$('table').append(str)
+				}else{
+					$('table td').parents('tr').remove()
+					var arr=[];
+					var str='';
+					arr=res.data.split(' ')
+					arr.splice(-1,1)
+					for(var i=0;i<arr.length;i++){
+						arr[i]=JSON.parse(arr[i])
+					}
+					for(var j=0;j<arr.length;j++){
+						str+=`<tr><td>${arr[j].news_title}</td><td>${arr[j].news_time}</td><td><button class="btn1">删除</button></td></tr>`
+					}
+					$('table').append(str)
+				}
+				$('table .btn1').click(function(){
+					var index=$(this).parent().parent().index()-1
+					var url="http://localhost/hd/admin/php/delNews.php";
+					axios.get(url,{params:{index:arr[index].id}}).then(res=>{
+						if(res.data=='ok'){
+							alert('删除成功')
+							var date1=$('.date1').val()
+							var date2=$('.date2').val()
+							var time1=new Date(date1+' 00:00:00').getTime()
+							var time2=new Date(date2+' 23:59:59').getTime()
+							// console.log(time1,time2)
+							var url="http://localhost/hd/admin/php/newsAdmin.php";
+							axios.get(url,{params:{time1,time2}}).then(res=>{
+								aaa(res)
+							})
+						}
+					})
+				})
+			}
+		}
+   </script>
+</body>
+</html>

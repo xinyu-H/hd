@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="../css/adoutHD.css">
+   <script src="../js/jQuery.min.js"></script>
+   <script src="../js/axios.js"></script>
+</head>
+<body>
+   <div class="wrap">
+      <div class="title">
+         <p><span class="fa fa-map-signs"></span>当前操作：关于辉达</p>
+      </div>
+      <textarea name="" id="" cols="120" rows="18" placeholder="请输入您要发表的关于辉达的描述内容，每个自然段用‘_’分割!"></textarea>
+      </br><button>发布</button>
+   </div>
+
+   <script>
+      $(function(){
+         $('button').click(function(){
+            var text=$('textarea').val().trim()
+            if(text==''){
+               alert('内容不可为空！')
+               return;
+            }
+            var url="http://localhost/hd/admin/php/aboutHD.php";
+            axios.get(url,{params:{text:text}}).then(res=>{
+               console.log(res.data)
+            })
+         })
+      })
+   </script>
+</body>
+</html>

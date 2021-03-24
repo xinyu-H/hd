@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>辉达后台管理系统</title>
+    <link rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="./js/jQuery.min.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <div class="left">
+                <span class="fa fa-book"></span>
+                <p>辉达后台管理系统</p>
+            </div>
+            <div class="right">
+                <span class="fa fa-user sp1"></span>
+                <span class="sp2"></span>
+                <span class="fa fa-power-off sp3"></span>
+                <!-- Button trigger modal -->
+                <!-- <span><button type="button" class="btn btn-primary btn-lg sp4" data-toggle="modal" data-target="#myModal">退出</button></span> -->
+                <!-- Modal -->
+                <!-- <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content" style="width:360px; margin:auto;">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                                <h4 class="modal-title" id="myModalLabel" style=" font-size: 18px;">提示</h4>
+                            </div>
+                            <div class="modal-body" style="text-align: center;font-size: 24px; height: 60px; line-height: 30px;">
+                                确定要退出吗？
+                            </div>
+                            <div class="modal-footer" style="height: 50px; padding:0 15px; line-height:50px;">
+                                <button type="button" class="btn btn-default" style=" font-size: 16px;outline: none;padding:3px 8px" data-dismiss="modal">取消</button>
+                                <button type="button" class="btn btn-primary" style=" font-size: 16px;outline: none;padding:3px 8px" onclick="exit()">确定</button>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </header>
+        <div class="content">
+            <div class="left">
+                <li><span>辉达后台管理</span> </li>
+                <li><a href="./html/aboutHD.html" target="iframe" style="text-decoration: none;"><span class="fa fa-address-card-o "></span>&nbsp; 关于辉达</a></li>
+                <li><a href="./html/HDschool.html" target="iframe" style="text-decoration: none;"><span class="fa fa-rmb"></span> &nbsp; 辉达学院</a></li>
+                <li><a href="./html/newsIssue.html" target="iframe" style="text-decoration: none;"><span class="fa fa-sign-out"></span>&nbsp;消息发布</a></li>
+                <li><a href="./html/newsAdmin.html" target="iframe" style="text-decoration: none;"><span class="fa fa-hand-peace-o"></span>&nbsp; 消息管理</a></li>
+                <li style="background-color: rgba(255,255,255,0.7);"><a href="./html/siteInof.html" target="iframe" style="text-decoration: none;"><span class="fa fa-check-square-o"></span>&nbsp; 地址信息</a></li>
+                <li><a href="./html/consult.html" target="iframe" style="text-decoration: none;"><span class="fa fa-search"></span>&nbsp; 开发咨询</a></li>
+                <li><a href="./html/student.html" target="iframe" style="text-decoration: none;"><span class="fa fa-sign-in"></span>&nbsp; 学生见习</a></li>
+                <li><a href="./html/school.html" target="iframe" style="text-decoration: none;"><span class="fa fa-server"></span>&nbsp; 高校见习</a></li>
+            </div>
+            <div class="right">
+                <iframe src="./html/siteInof.html" frameborder="0" name="iframe"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 判断有没有session
+      //   if(window.sessionStorage.getItem('user')==''||window.sessionStorage.getItem('user')==null){
+      //       window.location.href="http://localhost/book/index.html"
+      //   }else{
+      //       $('.sp2').text(window.sessionStorage.getItem('user'))
+      //   }
+        // 点击左侧管理选项卡
+        $('.left li').on({
+            'click':function(){
+                $(this).css('background','rgba(255,255,255,0.7)').siblings('li').css('background','rgba(255,255,255,0.4)')
+                $(this).children('a').addClass('current').parents('li').siblings('li').children('a').removeClass('current');
+            }
+        })
+
+        
+    </script>
+</body>
+</html>

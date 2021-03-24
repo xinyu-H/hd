@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" href="../css/hd_school.css">
+   <link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.min.css">
+   <script src="../js/axios.js"></script>
+   <script src="../js/jQuery.min.js"></script>
+   <script src="../js/hd_school.js"></script>
+</head>
+<body>
+   <div class="wrap">
+      <!-- 遮罩层 -->
+      <div class="zhe" style="display:none;background-color: rgba(0,0,0,0.6);height: 100%;position: fixed;top:0;left:0;width: 100%;z-index: 1000;">
+         <div class="box">
+            <div class="box_t">
+               马上填写合作申请，获得<span>岗前实训</span>合作资格
+               <a href="###" class="clear">x</a>
+            </div>
+            <div class="box_b">
+               <div class="bb_t">
+                  <li>
+                     <div>
+                        <p>01</p>
+                        <p>填写申请</p>
+                     </div>
+                  </li>
+                  <li> . . 2小时内回复 . . </li>
+                  <li>
+                     <div>
+                        <p>02</p>
+                        <p>咨询反馈</p>
+                     </div> 
+                  </li>
+               </div>
+               <div class="bb_m">
+                  <li>
+                     <span>*</span>
+                     <span>联系人</span>
+                     <input type="text" style="padding-left:10px;" placeholder="姓名">
+                  </li>
+                  <li>
+                     <span>*</span>
+                     <span>电话</span>
+                     <input type="text" style="padding-left:10px;" placeholder="手机或座机号码">
+                  </li>
+                  <li>
+                     <span>*</span>
+                     <span>备注</span>
+                     <textarea class="last" style="padding:10px 0 0 10px;" name="" id="" cols="62" rows="5" placeholder="请备注合作院校及合作方向"></textarea>
+                  </li>
+               </div>
+               <div class="bb_b">
+                  <a href="###">立即提交</a>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="zhe2" style="display:none;background-color: rgba(0,0,0,0.6);height: 100%;position: fixed;top:0;left:0;width: 100%;z-index: 1000;">
+         <div class="box">
+            <div class="box_t">
+               马上填写见习申请，获得<span> 第053期 岗前实训 </span>资格
+               <a href="###" class="clear">x</a>
+            </div>
+            <div class="box_b">
+               <div class="bb_t">
+                  <li>
+                     <div>
+                        <p>01</p>
+                        <p>填写申请</p>
+                     </div>
+                  </li>
+                  <li> . . 2小时内回复 . . </li>
+                  <li>
+                     <div>
+                        <p>02</p>
+                        <p>咨询反馈</p>
+                     </div> 
+                  </li>
+               </div>
+               <div class="bb_m">
+                  <li>
+                     <span>*</span>
+                     <span>联系人</span>
+                     <input type="text" style="padding-left:10px;" placeholder="姓名">
+                  </li>
+                  <li>
+                     <span>*</span>
+                     <span>电话</span>
+                     <input type="text" style="padding-left:10px;" placeholder="手机或座机号码">
+                  </li>
+                  <li style="height: 130px;">
+                     <span>*</span>
+                     <span>实训方向</span>
+                     <div>
+                        <span class="span1"><input type="checkbox" name="a1" value="云计算"><span>云计算</span></span>
+                        <span class="span1"><input type="checkbox" name="a2" value="大数据">大数据</span>
+                        <span class="span1"><input type="checkbox" name="a2" value="Python">Python</span>
+                        <span class="span1"><input type="checkbox" name="a2" value="Java">Java</span>
+                        <span class="span1"><input type="checkbox" name="a2" value="Web">Web</span>
+                        <span class="span1"><input type="checkbox" name="a2" value="UI设计">UI设计</span>
+                        <span class="span1"><input type="checkbox" name="a2" value="交互设计">交互设计</span>
+                        <span class="span1"><input type="checkbox" name="a2" value="平面设计">平面设计</span>
+                        <span class="span1"><input type="checkbox" name="a2" value="插画">插画</span>
+                        <span class="span1"><input type="checkbox" name="a2" value="软件设计">软件设计</span>
+                        <span class="span1"><input type="checkbox" name="a2" value="其他">其他</span>
+                     </div>
+                  </li>
+                  <li>
+                     <span>&nbsp;&nbsp;</span>
+                     <span>备注</span>
+                     <textarea class="last" style="padding:10px 0 0 10px;" name="" id="" cols="62" rows="4" placeholder="示例：请问学习全栈课程需要多长时间"></textarea>
+                  </li>
+               </div>
+               <div class="bb_b">
+                  <a href="###">立即提交</a>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- 头 上部 -->
+      <div class="header">
+         <div class="header_top">
+            <div class="h_t_left">
+               <svg style="margin: 30px 0 0 50px;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%">
+                  <path fill-rule="evenodd" fill="rgb(255, 255, 255)" d="M167.243,8.954 L166.047,3.423 L170.804,3.423 
+                  L172.000,8.954 L167.243,8.954 ZM171.825,10.883 L171.825,12.784 L167.565,13.379 L171.562,29.462 L164.004,
+                  29.462 L160.386,14.372 L154.579,15.166 L154.579,13.208 L159.919,12.500 L157.497,2.374 L164.851,2.374 
+                  L167.127,11.507 L171.825,10.883 ZM154.025,11.337 L154.025,29.377 L146.613,29.377 L146.613,12.727 L144.308,12.727 L148.948,2.260 L155.951,2.260 L151.865,11.337 L154.025,11.337 ZM136.021,29.462 L127.209,29.462L127.209,27.448 L128.872,27.448 L128.872,9.068 L121.723,9.068 L121.723,7.111 L128.872,7.111 L128.872,2.345L136.021,2.345 L136.021,7.111 L137.276,7.111 L137.276,9.068 L136.021,9.068 L136.021,29.462 ZM109.847,5.125L119.272,5.125 C119.777,5.125 120.205,5.295 120.556,5.636 C120.906,5.976 121.081,6.392 121.081,6.884 L121.081,26.881 L109.847,26.881 L109.847,5.125 ZM114.953,24.980 L116.354,24.980 L116.354,16.669 L114.953,16.669 L114.953,24.980 ZM114.953,14.797 L116.354,14.797 L116.354,7.621 C116.354,7.243 116.159,7.054 115.770,7.054 L114.953,7.054 L114.953,14.797 ZM75.589,10.372 L81.484,10.372 L81.484,27.334 L102.085,27.334 L102.085,29.405 L75.589,29.405 L75.589,10.372 ZM100.888,25.944 L94.440,25.944 L91.989,18.995 L89.975,25.944 L83.322,25.944 L88.399,10.571 L83.176,10.571 L83.176,8.698 L88.662,8.698 L88.662,2.458 L95.257,2.458 L95.257,8.698 L101.064,8.698 L101.064,10.571 L95.578,10.571 L100.888,25.944 ZM75.035,3.168 L80.813,3.168 L81.396,8.869 L75.648,8.869 L75.035,3.168 ZM63.859,29.405 L57.352,29.405 L57.352,25.235 L51.253,25.235 L51.253,23.307 L57.352,23.307 L57.352,20.498 L51.137,20.498 L52.450,12.954 L51.253,12.954 L51.253,11.053 L52.771,11.053 L53.121,8.982 L58.548,8.982 L58.227,11.053 L67.069,11.053 L67.069,12.954 L57.965,12.954 L57.118,18.570 L58.315,18.570 L58.315,14.258 L63.859,14.258 L63.859,18.570 L67.069,18.570 L67.069,20.498 L63.859,20.498 L63.859,23.307 L67.069,23.307 L67.069,25.235 L63.859,25.235 L63.859,29.405 ZM61.145,5.437 C61.145,5.040 60.941,4.841 60.533,4.841 L57.177,4.841 L57.177,8.415 L51.253,8.415 L51.253,2.969 L65.260,2.969 C65.746,2.969 66.169,3.144 66.529,3.494 C66.889,3.844 67.069,4.265 67.069,4.756 L67.069,8.415 L61.145,8.415 L61.145,5.437 ZM49.648,26.058 L50.582,25.774 L50.582,27.675 L44.921,29.405 L44.717,27.590 L45.446,27.363 L45.446,15.563 L44.892,15.563 L44.250,29.377 L39.786,29.377 L40.632,15.563 L39.639,15.563 L39.639,13.634 L42.499,13.634 L42.499,2.203 L47.722,2.203 L47.722,13.634 L50.874,13.634 L50.874,15.563 L49.648,15.563 L49.648,26.058 ZM48.189,12.613 L48.510,3.281 L50.174,3.281 L49.853,12.613 L48.189,12.613 ZM40.048,3.281 L41.770,3.281 L42.032,12.613 L40.369,12.613 L40.048,3.281 ZM19.063,30.999 L25.477,24.765 L25.477,6.234 L19.063,6.234 L19.063,12.296 L12.649,12.296 L12.649,6.234 L19.063,-0.001 L31.891,-0.001 L31.891,24.765 L25.477,30.999 L19.063,30.999 ZM6.414,24.765 L12.649,24.765 L12.649,18.530 L19.063,18.530 L19.063,24.765 L12.649,30.999 L-0.000,30.999 L-0.000,6.234 L6.414,-0.001 L12.649,-0.001 L6.414,6.234 L6.414,24.765 ZM127.968,22.569 L122.831,22.569 L122.511,12.528 L127.530,12.528 L127.968,22.569 Z"></path>
+               </svg>
+            </div>
+            <div class="h_t_right">
+               <a href="http://localhost/hd/index.html" class="">定制服务<span class="line1"></span></a>
+               <a href="http://localhost/hd/html/hd_school.html" class="color">辉达岗训<span class="line2"></span></a>
+            </div>
+         </div>
+      </div>
+      <!-- 文字 -->
+      <div class="text">
+         <div class="hd_title">
+            <p>辉达学院</p>
+         </div>
+         <div class="hd_content">
+            
+         </div>
+      </div>
+      <!-- 申请 -->
+      <div class="apply">
+         <div class="content">
+            <div class="c_l">
+               <img src="../img/hd_foot_bg.png" alt="">
+            </div>
+            <div class="c_r">
+               <p><span></span> 请在这里填写申请</p>
+               <a class="apply_a1" href="###">大学生见习申请</a>
+               <a class="apply_a2" href="###">高校见习合作申请</a>
+            </div>
+         </div>
+      </div>
+      <!-- 底部 -->
+      <div class="footer">
+         <div class="left">
+            <img src="../img/logo2.png" alt="">
+         </div>
+         <div class="right">
+            <p>联系电话：<span>15011556811</span></p>
+            <p>QQ：<span>527419208</span></p>
+            <p>Email：<span>qqi2001@sina.com</span></p>
+            <p>地址：<span>北京市朝阳区望京中关村电子创业科技园8号楼502室</span></p>
+            <img src="../img/2.png" alt="">
+         </div>
+      </div>
+
+
+      <script>
+         var url="http://localhost/hd/admin/php/HDschool.php";
+         axios.get(url,{params:{}}).then(res=>{
+            var arr=[]
+            var str=''
+            arr=res.data.split('-')
+            for(var i=0;i<arr.length;i++){
+               str+='<p>'+arr[i]+'</p>'
+            }
+            // console.log(str)
+            $('.hd_content').html(str)
+         })
+      </script>
+   </div>
+</body>
+</html>

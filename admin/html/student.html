@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="../css/student.css">
+   <script src="../js/jQuery.min.js"></script>
+   <script src="../js/axios.js"></script>
+</head>
+<body>
+   <div class="wrap">
+      <div class="title">
+         <p><span class="fa fa-map-signs"></span>当前操作：学生见习</p>
+      </div>
+      <div class="time">
+         <div class="start">
+            <label>起始时间：</label>
+            <input type="date">
+         </div>
+         <div class="end">
+            <label>结束时间：</label>
+            <input type="date">
+         </div>
+         <button>查询</button>
+      </div>
+      <table border="2"  cellspacing="0">
+         <tr>
+            <th style="height: 40px;width: 160px;">联系人</th>
+            <th style="width: 160px;">电话</th>
+            <th style="width: 0px;">备注</th>
+            <th style="width: 160px;">日期</th>
+         </tr>
+      </table>
+      <button class="btn" style="width: 160px;height: 40px; font-size: 16px;margin-left: 45%;margin-top:50px">导出EXCEL</button>
+   </div>
+</body>
+</html>

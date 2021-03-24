@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" href="../css/sitelinof.css">
+	<script src="../js/jQuery.min.js"></script>
+	<script src="../js/axios.js"></script>
+</head>
+<body>
+   <div class="wrap">
+      <div class="title">
+         <p><span class="fa fa-map-signs"></span>当前操作：添加首页地址栏信息</p>
+      </div>
+      <table border="1" cellspacing="0">
+         <tr>
+            <td style="width: 160px;">地址</td>
+            <td><input type="text" class="address" placeholder="请输入地址"></td>
+         </tr>
+         <tr>
+            <td>电话</td>
+            <td><input type="text" class="tel" placeholder="请输入电话"></td>
+         </tr>
+         <tr>
+            <td>QQ</td>
+            <td><input type="text" class="qq" placeholder="请输入qq"></td>
+         </tr>
+         <tr>
+            <td>Email</td>
+            <td><input type="text" class="email" placeholder="请输入邮箱"></td>
+         </tr>
+         <tr>
+            <td>二维码</td>
+            <td><input type="file" class="img"></td>
+         </tr>
+      </table>
+      <button class="btn">发布联系方式</button>
+   </div>
+	
+	<script>
+		$('.btn').click(function(){
+			var address=$('.address').val()
+			var tel=$('.tel').val()
+			var qq=$('.qq').val()
+			var email=$('.email').val()
+			var img=$('.img').val()
+			if(address==''||tel==''||qq==''||email==''||img==''){
+				alert('选项不可为空')
+			}
+			var url="http://localhost/hd/admin/php/sitelinof.php";
+			axios.get(url).then(res=>{
+				console.log(res.data)
+			})
+		})
+		
+		
+	</script>
+</body>
+</html>

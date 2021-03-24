@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  background: url(../images/2024093.jpg) no-repeat;
+  background-size: 100% 100%;
+}
+.wrap {
+  width: 100%;
+  height: 100%;
+}
+.wrap header {
+  width: 100%;
+  height: 80px;
+  background-color: rgba(255, 255, 255, 0.6);
+  /* border-bottom: 2px solid rgba(255, 255, 255, 0.6); */
+}
+.wrap header > .left {
+  height: 100%;
+  width: 600px;
+  margin-left: 50px;
+  line-height: 80px;
+  float: left;
+}
+.wrap header > .left span {
+  display: block;
+  font-size: 50px;
+  line-height: 80px;
+  float: left;
+  color: rgba(255, 255, 255, 0.8);
+}
+.wrap header > .left > p {
+  font-size: 30px;
+  margin-left: 60px;
+  color: #fff;
+  font-weight: bold;
+}
+.wrap header > .right {
+  float: right;
+  width: 300px;
+  height: 100%;
+  margin-right: 150px;
+  line-height: 80px;
+}
+.wrap header > .right > span {
+  display: inline-block;
+  font-size: 24px;
+  color: rgba(255, 255, 255);
+  vertical-align: middle;
+}
+.wrap header > .right span:nth-child(2) {
+  margin: 0 60px 0 6px;
+  font-size: 20px;
+}
+.wrap header > .right span:nth-child(4) {
+  margin-left: 6px;
+  line-height: 80px;
+}
+.wrap header > .right span:nth-child(4) > button {
+  margin-top: -3px;
+  padding: 0;
+  outline: none;
+  height: 30px;
+  width: 70px;
+  font-size: 18px;
+  border: none;
+  color: rgba(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.wrap .content {
+  width: 100%;
+  height: calc(100vh - 80px);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.wrap .content > .left {
+  width: 260px;
+  height: 86vh;
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 50px 20px 0 20px;
+  float: left;
+}
+.wrap .content > .left li {
+  width: 100%;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.4);
+  margin-bottom: 4px;
+  text-align: center;
+  line-height: 50px ;
+  font-size: 20px;
+  font-weight: bold;
+  color: #777;
+  border-radius: 5px ;
+  border: 2px solid rgba(200, 200, 200);
+}
+.wrap .content > .left li a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  color: #888;
+  transition: all 0.3s;
+}
+.wrap .content > .left li a:hover {
+  transform: scale(1.2);
+  text-decoration: none;
+}
+.wrap .content > .left li:nth-child(1) span {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 28px;
+  border-radius: 5px;
+}
+.wrap .content > .right {
+  width: calc(100vw - 360px);
+  height: 81%;
+  float: left;
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 80px 20px;
+}
+.wrap .content > .right iframe {
+  width: 90%;
+  height: 82%;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+}
+.current {
+  transform: scale(1.2);
+}

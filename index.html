@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" href="css/index.css">
+   <link rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.min.css">
+   <script src="js/axios.js"></script>
+   <script src="js/jQuery.min.js"></script>
+   <script src="js/index.js"></script>
+</head>
+<body>
+   <div class="wrap">
+      <!-- 遮罩层 -->
+      <div class="zhe" style="display:none;background-color: rgba(0,0,0,0.6);height: 100%;position: fixed;top:0;left:0;width: 100%;z-index: 1000;">
+         <div class="box">
+            <div class="box_t">
+               填写需求，获得<span>产品咨询</span>和<span>项目报价</span> 
+               <a href="###" class="clear">x</a>
+            </div>
+            <div class="box_b">
+               <div class="bb_t">
+                  <li>
+                     <div>
+                        <p>01</p>
+                        <p>填写需求</p>
+                     </div>
+                  </li>
+                  <li> . . 2小时内回复 . . </li>
+                  <li>
+                     <div>
+                        <p>02</p>
+                        <p>项目咨询</p>
+                     </div> 
+                  </li>
+                  <li> . . 2小时内回复 . . </li>
+                  <li>
+                     <div>
+                        <p>03</p>
+                        <p>报价反馈</p>
+                     </div>
+                     
+                  </li>
+               </div>
+               <div class="bb_m">
+                  <li>
+                     <span>*</span>
+                     <span>联系人</span>
+                     <input type="text" style="padding-left:10px;" placeholder="姓名">
+                  </li>
+                  <li>
+                     <span>*</span>
+                     <span>电话</span>
+                     <input type="text" style="padding-left:10px;" placeholder="手机或座机号码">
+                  </li>
+                  <li>
+                     <span>&nbsp;&nbsp;</span>
+                     <span>需求描述</span>
+                     <textarea class="last" style="padding:10px 0 0 10px;" name="" id="" cols="62" rows="5" placeholder="实例：我们是一家酒厂，想做一类酒类商超APP，类似京东APP"></textarea>
+                  </li>
+               </div>
+               <div class="bb_b">
+                  <a href="###">立即提交</a>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="zhe3" style="display:none;background-color: rgba(0,0,0,0.6);height: 100%;position: fixed;top:0;left:0;width: 100%;z-index: 1000;">
+         <div class="box">
+            <div class="box_t">
+               最新消息
+               <a href="###" class="clear">x</a>
+            </div>
+            <div class="box_bottom">
+               <div class="bbl">
+               </div>
+               <div class="bbr">
+                  <div class="bbrt">
+                   
+                  </div>
+                  <div class="bbrb">
+
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- 头 上部 -->
+      <div class="header_top">
+         <div class="h_t_left">
+            <img src="./img/logo.png" alt="">
+            <div>
+               <span></span>
+               <img src="./img/tel.png" alt="">
+               <p>400-4000-0000</p>
+            </div>
+         </div>
+         <div class="h_t_right">
+            <a href="http://localhost/hd/index.html" class="color a1">定制服务<span class="line1"></span></a>
+            <a href="./html/hd_school.html" class="a2">辉达岗训<span class="line2"></span></a>
+         </div>
+      </div>
+      <!-- 头 banner -->
+      <div class="header_bottom">
+         <div class="h_b_content">
+            <div class="h_b_left">
+               <img src="./img/banner_01.png" alt="">
+            </div>
+            <div class="h_b_middle">
+               <p>一体式设计开发服务方式解决您的后顾之忧</p>
+               <p>IOS APP | Android APP | 网站 | 小程序 | 公众号</p>
+               <a href="###" class="header_a">详情咨询</a>
+            </div>
+            <div class="h_b_right">
+               <img src="./img/banner_02.png" alt="">
+            </div>
+         </div>
+      </div>
+      <!-- news -->
+      <div class="news">
+         <p>最新消息</p>
+         <div class="news_info">
+            <div>
+
+            </div>
+            <p><span><a href="javascript:;" class="more">查看更多</a></span></p>
+         </div>
+      </div>
+      <!-- 服务 -->
+      <div class="serve">
+         <div class="serve_title">
+            <p>我们为您提供</p>
+            <p>从项目出发,个性化定制服务</p>
+         </div>
+         <div class="serve_info">
+            <div class="serve_i_1">
+               <div class="left">
+                  <span>01</span>
+                  <img src="./img/item01.jpg" alt="">
+                  <p>专注于iOS系统高端定制开发，为您提供优质的iOS App开发设计方案服务</p>
+               </div>
+               <div class="right">
+                  <span>02</span>
+                  <img src="./img/item02.jpg" alt="">
+                  <p>针对于主流Android系统提供全流程App咨询、策划、开发服务</p>
+               </div>
+            </div>
+            <div class="serve_i_2">
+               <div class="left">
+                  <span>03</span>
+                  <img src="./img/item03.jpg" alt="">
+                  <p>多平台实现，成本适中，维护升级更便捷</p>
+               </div>
+               <div class="right">
+                  <span>04</span>
+                  <img src="./img/item04.jpg" alt="">
+                  <p>企业官网和功能性网站定制开发，助力企业获取线上流量，让业务链接互联网</p>
+               </div>
+            </div>
+            <div class="serve_i_3">
+               <div class="left">
+                  <span>05</span>
+                  <img src="./img/item05.jpg" alt="">
+                  <p>累计上线案例超过2000+，开发成本低，用户体验更优秀</p>
+               </div>
+               <div class="right">
+                  <span>06</span>
+                  <img src="./img/item06.jpg" alt="">
+                  <p>适用于O2O、B2B、B2C、分销电子商务模式定制APP开发、支持双系统</p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- 定制 -->
+      <div class="customization">
+         <a href="javascript:;" class="customization_text">更多高端定制设计方案,去咨询</a>
+      </div>
+      <!-- 流程 -->
+      <div class="flow">
+         <div class="flow_top">
+            <p>我们的服务流程</p>
+            <p>一站式设计、开发体验,解决您的后顾之忧</p>
+         </div>
+         <div class="flow_bottom">
+            <div class="flow_b_bgc">
+               <ol class="ol1">
+                  <li>需求调研</li>
+                  <li>方案规划</li>
+                  <li>项目立项</li>
+                  <li>视觉设计</li>
+                  <li>程序开发</li>
+                  <li>质量审核</li>
+                  <li>验收上线</li>
+                  <li>后期维护</li>
+               </ol>
+               <ul class="ul1">
+                  <li>
+                     <div class="fa fa-file-text-o"></div>
+                     <span></span>
+                  </li>
+                  <li>
+                     <div class="fa fa-ravelry"></div>
+                     <span></span>
+                  </li>
+                  <li>
+                     <div class="fa fa-bookmark-o"></div>
+                     <span></span>
+                  </li>
+                  <li>
+                     <div class="fa fa-desktop"></div>
+                     <span></span>
+                  </li>
+                  <li>
+                     <div class="fa fa-code"></div>
+                     <span></span>
+                  </li>
+                  <li>
+                     <div class="fa fa-map-o"></div>
+                     <span></span>
+                  </li>
+                  <li>
+                     <div class="fa fa-check-circle"></div>
+                     <span></span>
+                  </li>
+                  <li>
+                     <div class="fa fa-cogs"></div>
+                     <span></span>
+                  </li>
+               </ul>
+            </div>
+            <ol class="ol2">
+               <li>
+                  <p>需求调研</p>
+                  <span>项目启动、成立项目小组、分析流程、确定工期</span>
+               </li>
+               <li>
+                  <p>方案规划</p>
+                  <span>项目启动、成立项目小组、分析流程、确定工期</span>
+               </li>
+               <li>
+                  <p>项目立项</p>
+                  <span>项目启动、成立项目小组、分析流程、确定工期</span>
+               </li>
+               <li>
+                  <p>视觉设计</p>
+                  <span>项目启动、成立项目小组、分析流程、确定工期</span>
+               </li>
+               <li>
+                  <p>程序开发</p>
+                  <span>项目启动、成立项目小组、分析流程、确定工期</span>
+               </li>
+               <li>
+                  <p>质量审核</p>
+                  <span>项目启动、成立项目小组、分析流程、确定工期</span>
+               </li>
+               <li>
+                  <p>验收上线</p>
+                  <span>项目启动、成立项目小组、分析流程、确定工期</span>
+               </li>
+               <li>
+                  <p>后期维护</p>
+                  <span>项目启动、成立项目小组、分析流程、确定工期</span>
+               </li>
+            </ol>
+         </div>
+      </div>
+      <!-- 关于辉达 -->
+      <div class="hd">
+         <div class="hd_title">
+            <p>关于辉达</p>
+            <span>多年项目团队经验，项目经验</span>
+         </div>
+         <div class="hd_content">
+
+         </div>
+      </div>
+      <!-- 更多设计方案 -->
+      <div class="text">
+         <div>
+            更多高端定制设计方案 , 去咨询
+         </div>
+         <img src="./img/hd_desc_bg.png" alt="">
+      </div>
+      <!-- 客户 -->
+      <div class="user">
+         <p>我们的客户</p>
+         <p>合作多年 , 好评如潮</p>
+      </div>
+      <!-- 伙伴 -->
+      <div class="partner">
+         <img class="bgc" src="./img/requirement.png" alt="">
+         <img class="partnerIcon" src="./img/qiye.png" alt="">
+         <div>
+            <div class="top">
+               <p>简单填写需求，我们会尽快联系您，并提供产品咨询和项目报价！</p>
+            </div>
+            <a href="javascript:;" class="bottom">填写需求</a>
+         </div>
+      </div>
+      <!-- 底部 -->
+      <div class="footer">
+         <div class="left">
+            <img src="./img/logo2.png" alt="">
+         </div>
+         <div class="right">
+            <p>联系电话：15011556811</p>
+            <p>QQ：527419208</p>
+            <p>Email：qqi2001@sina.com</p>
+            <p>地址：北京市朝阳区望京中关村电子创业科技园8号楼502室</p>
+            <img src="./img/2.png" alt="">
+         </div>
+      </div>
+
+      <script>
+         var url="http://localhost/hd/admin/php/aboutHD.php";
+         axios.get(url,{params:{}}).then(res=>{
+            var arr=[]
+            var str=''
+            arr=res.data.split('-')
+            for(var i=0;i<arr.length;i++){
+               str+='<p>'+arr[i]+'</p>'
+            }
+            $('.hd_content').html(str)
+         })
+         var url2="http://localhost/hd/admin/php/newsIssue.php"
+         axios.get(url2,{params:{}}).then(res=>{
+            var str=''
+            var str2=''
+            var arr=res.data.split(' ')
+            arr=arr.slice(0,arr.length-1);
+            
+            for(var k=0;k<arr.length;k++){
+               arr[k]=JSON.parse(arr[k])
+            }
+            var arr1=[]
+            var arr2=[]
+            arr1=arr.splice(0,arr.length-4)
+            arr2=arr.splice(0,2)
+            arr1=arr.concat(arr2)
+            for(var i=0;i<arr.length;i++){
+               str+=`<p><a href="javascript:;">${arr[i].news_title}</a><span>${arr[i].news_time}</span></p>`;
+            }
+            for(var j=0;j<arr1.length;j++){
+               str2+=`<li><p>${arr1[j].news_title}</p><span>${arr1[j].news_time}</span></li>`;
+            }
+            $('.news_info>div').html(str)
+            $('.box_bottom .bbl').html(str2)
+            $('.box_bottom .bbr .bbrt').html(`<p>${arr1[0].news_title}</p><span>${arr1[0].news_time}</span>`)
+            $('.box_bottom .bbr .bbrb').html(arr1[0].news_text)
+            $('.box_bottom .bbl li').click(function(){
+               $('.box_bottom .bbr .bbrt').html($(this).html())
+               $('.box_bottom .bbr .bbrb').html(arr1[$(this).index()].news_text)
+            })
+            
+            
+         })
+         
+      </script>
+   </div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+body {
+   height: 90vh;
+ }
+ .wrap {
+   width: 100%;
+   height: 100%;
+ }
+ .wrap .title {
+   height: 50px;
+   width: 90%;
+   margin: 50px 0 0 50px;
+   font-size: 20px;
+   line-height: 50px;
+   border-bottom: 1px solid #000;
+ }
+ .wrap .title span {
+   margin: 0 10px 0 30px;
+ }
+ .wrap .time {
+   width: 90%;
+   height: 80px;
+   margin: 10px 0;
+   margin-left: 90px;
+   line-height: 80px;
+ }
+ .wrap .time > div {
+   width: 340px;
+   height: 100%;
+   float: left;
+ }
+ .wrap .time > div input {
+   height: 20px;
+ }
+ .wrap .time > div label {
+   font-size: 20px;
+ }
+ .wrap .time button {
+   width: 150px;
+   height: 30px;
+ }
+ .wrap table {
+   width: 1000px;
+   margin: auto;
+   font-size: 20px;
+ }
+ 
